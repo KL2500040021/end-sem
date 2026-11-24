@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">STAY ORGANIZED</p>
+      <h1>My To-Do List</h1>
+      <p class="subtitle">Small steps make a big difference.</p>
+    </header>
+
+    <form id="todo-form" class="todo-form">
+      <label class="sr-only" for="todo-input">New task</label>
+      <input id="todo-input" type="text" placeholder="What do you need to do?" maxlength="120" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <section class="toolbar" aria-label="Task filters">
+      <div class="filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="active" type="button">Active</button>
+        <button class="filter" data-filter="completed" type="button">Completed</button>
+      </div>
+      <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <footer>
+      <span id="task-count">0 tasks left</span>
+      <button id="load-samples" class="text-button" type="button">Load sample tasks (API)</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
